@@ -47,4 +47,32 @@ describe('Thermostat', function() {
 
   });
 
+  describe('Power Saving Mode', function() {
+  	it('defaults to on', function() {
+  		expect(thermostat.powerSavingMode).toBe(true)
+  	});
+
+  	 it('can be switched off', function() {
+  	 	thermostat.powerSavingModeOff()
+  		expect(thermostat.powerSavingMode).toBe(false)
+  	});
+
+  	 it('can be switched on', function() {
+  	 	thermostat.powerSavingModeOn()
+  		expect(thermostat.powerSavingMode).toBe(true)
+  	});
+
+  	 it('has a maximum temperature of 25 degrees when switched to on', function() {
+  	 	thermostat.powerSavingModeOn()
+  		expect(thermostat.maximumTemp).toBe(25)
+  	});
+
+  	  it('has a maximum temperature of 32 degrees when switched to off', function() {
+  	 	thermostat.powerSavingModeOff()
+  	 	expect(thermostat.powerSavingMode).toBe(false)
+  		expect(thermostat.maximumTemp).toBe(32)
+  	});
+
+  });
+
 });
