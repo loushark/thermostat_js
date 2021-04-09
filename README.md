@@ -1,4 +1,4 @@
-Specification:
+### Specification:
 
 [x] Thermostat starts at 20 degrees  
 [x] You can increase the temperature with an up function  
@@ -10,3 +10,28 @@ Specification:
 [x] You can reset the temperature to 20 with a reset function  
 [x] You can ask about the thermostat's current energy usage: < 18 is low-usage, <= 25 is medium-usage, anything else is high-usage.  
 [ ] (In the challenges where we add an interface, low-usage will be indicated with green, medium-usage indicated with black, high-usage indicated with red.)  
+
+
+---
+
+### User interface requirements
+
+[ ] current temperature display  
+[ ] max temperature display  
+[ ] energy usage display  
+
+[ ] temperature up button  
+    -> updates current temp display  
+[ ] temperature down button  
+    -> updates current temp display  
+[ ] thermostat reset button  
+    -> updates max temp and current temp displays  
+[ ] power mode on button  
+    -> updates max temp display   
+[ ] power mode off button  
+    -> updates max temp  
+[ ] energy usage button  
+    -> updates energy usage display  
+
+
+---
