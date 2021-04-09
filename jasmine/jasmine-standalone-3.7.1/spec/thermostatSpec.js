@@ -78,7 +78,23 @@ describe('Thermostat', function() {
   	 	expect(thermostat.powerSavingMode).toBe(false)
   		expect(thermostat.maximumTemp).toBe(32)
   	});
+  });
 
+  describe('reset mode', function(){
+    it('resets power mode back to on', function(){
+      thermostat.reset()
+      expect(thermostat.powerSavingMode).toBe(true)
+    });
+
+    it('resets temperature to start temp', function(){
+      thermostat.reset()
+      expect(thermostat.temp).toBe(20);
+    });
+
+    it('resets maximumTemp to 25', function(){
+      thermostat.reset()
+      expect(thermostat.maximumTemp).toBe(25)
+    });
   });
 
 });
