@@ -78,6 +78,19 @@ describe('Thermostat', function() {
   	 	expect(thermostat.powerSavingMode).toBe(false)
   		expect(thermostat.maximumTemp).toBe(32)
   	});
+
+    it('updates the current temp if it is above the power saver mode max temp', function(){
+      for(var i=0; i<7; i++){
+        thermostat.up();
+      }
+      thermostat.powerSavingModeOn()
+      expect(thermostat.temp).toBe(25)
+      thermostat.powerSavingModeOff()
+      for(var i=0; i<10; i++){
+        thermostat.up();
+      }
+      expect(thermostat.temp).toBe(32)
+    });
   });
 
   describe('reset mode', function(){
@@ -110,11 +123,14 @@ describe('Thermostat', function() {
     });
 
     it('is high when above 25', function(){
+      thermostat.powerSavingModeOff()
       for(var i=0; i<6; i++){
         thermostat.up();
       }
       expect(thermostat.energyUsage()).toBe("High")
     });
   });
+
+
 
 });

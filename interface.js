@@ -31,7 +31,10 @@ $( document ).ready(function( ) {
     displayEnergyUsage();
   });
 
-
+  $( "#reset" ).click(function() {
+    thermostat.reset();
+    resetThermostat()
+  });
 
   function updateTemp() {
     $("#changeTemp").text("Current Temp is: " + thermostat.temp);
@@ -39,16 +42,24 @@ $( document ).ready(function( ) {
 
   function updatePowerMode() {
     if(thermostat.powerSavingMode === true){
-      $("#powerMode").text("Power saving mode is: on");
+      updateTemp();
+      $("#powerMode").text("Power saving mode");
       $("#PSMLight").attr("class", "led-green");
     } else {
-    $("#powerMode").text("Power saving mode is: off ");
+      updateTemp();
+    $("#powerMode").text("Power saving mode ");
     $("#PSMLight").attr("class", "led-red");
     }
   }
 
   function displayEnergyUsage() {
     $("#energy").text("The energy usage is: " + thermostat.energyUsage());
+  }
+
+  function resetThermostat() {
+    updateTemp();
+    updatePowerMode();
+    displayEnergyUsage()
   }
 
 });

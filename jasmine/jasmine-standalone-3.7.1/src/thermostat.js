@@ -14,11 +14,14 @@ class Thermostat {
   // }
 
   up(){
+    if(this.isMaximumTemperature()){
+      return;
+    }
     return this.temp += 1;
   }
 
   down(){
-    if (this.isMinimumTemperature()){
+    if(this.isMinimumTemperature()){
       return;
     }
     this.temp -= 1;
@@ -29,17 +32,23 @@ class Thermostat {
   }
 
   isMaximumTemperature() {
-    return this.temp === this.MINIMUMTEMP;
+    return this.temp === this.maximumTemp;
   }
 
   powerSavingModeOff() {
     this.powerSavingMode = false;
     this.changeMaximumTemp();
+    if(this.temp > this.maximumTemp){
+      this.temp = this.maximumTemp
+    }
   }
 
   powerSavingModeOn() {
     this.powerSavingMode = true;
     this.changeMaximumTemp();
+    if(this.temp > this.maximumTemp){
+      this.temp = this.maximumTemp
+    }
   }
 
   isPowerSavingMode() {
@@ -56,8 +65,7 @@ class Thermostat {
 
   reset() {
     this.temp = this.startTemp;
-    this.powerSavingMode = true;
-    this.changeMaximumTemp();
+    this.powerSavingModeOn()
   }
 
   energyUsage(){
