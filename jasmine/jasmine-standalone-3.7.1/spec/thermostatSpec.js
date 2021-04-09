@@ -97,4 +97,24 @@ describe('Thermostat', function() {
     });
   });
 
+  describe ('energy usage', function(){
+    it('is low when under 18', function(){
+      for(var i=0; i<3; i++){
+        thermostat.down();
+      }
+      expect(thermostat.energyUsage()).toBe("Low")
+    });
+
+    it('is medium when above below or equal to 25', function(){
+      expect(thermostat.energyUsage()).toBe("Medium")
+    });
+
+    it('is high when above 25', function(){
+      for(var i=0; i<6; i++){
+        thermostat.up();
+      }
+      expect(thermostat.energyUsage()).toBe("High")
+    });
+  });
+
 });

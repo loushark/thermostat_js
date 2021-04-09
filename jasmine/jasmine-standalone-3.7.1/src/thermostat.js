@@ -55,4 +55,14 @@ class Thermostat {
     this.powerSavingMode = true;
     this.changeMaximumTemp();
   }
+
+  energyUsage(){
+    if(this.temp < 18){
+      return "Low";
+    } else if(this.temp <= 25){
+      return "Medium";
+    } else if(this.temp > 25){
+      return "High";
+    };
+  }
 };
