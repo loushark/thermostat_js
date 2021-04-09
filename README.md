@@ -21,17 +21,17 @@
 [ ] energy usage display  
 
 [x] temperature up button  
-    [ ] updates current temp display  
+-> [ ] updates current temp display  
 [x] temperature down button  
-    [ ] updates current temp display  
+-> [ ] updates current temp display  
 [x] thermostat reset button  
-    [ ] updates max temp and current temp displays  
+-> [ ] updates max temp and current temp displays  
 [x] power mode on button  
-    [ ] updates max temp display   
+-> [ ] updates max temp display   
 [x] power mode off button  
-    [ ] updates max temp  
+-> [ ] updates max temp  
 [x] energy usage button  
-    [ ] updates energy usage display  
+-> [ ] updates energy usage display  
 
 
 ---
