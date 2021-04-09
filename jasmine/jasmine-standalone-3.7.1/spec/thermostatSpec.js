@@ -52,6 +52,12 @@ describe('Thermostat', function() {
   		expect(thermostat.powerSavingMode).toBe(true)
   	});
 
+    it('is either on or off', function() {
+  		expect(thermostat.isPowerSavingMode()).toBe(true)
+      thermostat.powerSavingModeOff()
+      expect(thermostat.isPowerSavingMode()).toBe(false)
+  	});
+
   	 it('can be switched off', function() {
   	 	thermostat.powerSavingModeOff()
   		expect(thermostat.powerSavingMode).toBe(false)

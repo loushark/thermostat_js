@@ -24,36 +24,31 @@ class Thermostat {
    return this.temp === this.MINIMUMTEMP;
  }
 
- isMaximumTemperature() {
- 	return this.temp === this.MINIMUMTEMP;
- }
+   isMaximumTemperature() {
+   	return this.temp === this.MINIMUMTEMP;
+   }
 
  powerSavingModeOff() {
  	this.powerSavingMode = false;
- 	this.changeMaximumTemp;
- 	return;
+ 	this.changeMaximumTemp();
  }
 
   powerSavingModeOn() {
  	this.powerSavingMode = true;
- 	this.changeMaximumTemp;
- 	return;
+ 	this.changeMaximumTemp();
  }
 
+isPowerSavingMode() {
+  return this.powerSavingMode === true;
+}
+
+
  changeMaximumTemp() {
- 	if (this.powerSavingMode === true) {
+ 	if (this.isPowerSavingMode()) {
  		return this.maximumTemp = 25;
- 	} else if (this.powerSavingMode === false) {
+ 	} else {
  		return this.maximumTemp = 32;
  	}
  }
 
-
 };
-
-
-/* 	- powerSavingMode = true/false
-	- if powerSavingMode === true
-		maximum temperature is 25 degrees
-*/
-
