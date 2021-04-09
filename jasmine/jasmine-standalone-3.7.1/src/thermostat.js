@@ -9,6 +9,10 @@ class Thermostat {
     this.powerSavingMode = true;
   }
 
+  // getTemperature() {
+  //   return this.temp;
+  // }
+
   up(){
     return this.temp += 1;
   }
