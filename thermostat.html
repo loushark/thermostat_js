@@ -8,10 +8,10 @@
       <title>Thermostat</title>
     </head>
     <body>
-      <heading>
+      <header>
         <h1>- THERMOSTAT - </h1>
         <p>it's getting hot in here...</p>
-      </heading>
+      </header>
       <br>
       <section>
         <p id="changeTemp"></p>
@@ -36,5 +36,20 @@
           <button type="button" id="reset">Reset!</button>
         </p>
       </section>
+      <br>
+      <section>
+        <section>
+        <form id="select-city">
+          <input id="current-city" type="text" placeholder="Enter a city"></input>
+          <input type="submit"></input>
+        </form>
+        </section>
+        <h3>Current location: 
+          <br><span id="current-location"></span></h3>
+        <h3>Current temperature: <br><span id="current-temperature"></span></h3>
+        <h3>Current weather: <br><span id="current-weather"></span></h3>
+      </section>
+
+
     </body>
   </html>

@@ -62,4 +62,21 @@ $( document ).ready(function( ) {
     displayEnergyUsage()
   }
 
+  $('#select-city').submit(function(event) {
+    event.preventDefault();
+    var city = $('#current-city').val();
+    displayWeather(city);
+    })
+
+  function displayWeather(city) {
+    var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
+    var token = '&appid=0de9e54cb532e0fea72299fddd40c989';
+    var units = '&units=metric';
+    $.get(url + token + units, function(data) {
+      $('#current-location').text(data.name);
+      $('#current-temperature').text(data.main.temp +' Celsius');
+      $('#current-weather').text(data.weather[0].description);
+    })
+  }
+
 });
