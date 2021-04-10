@@ -16,22 +16,28 @@
 
 ### User interface requirements
 
-[ ] current temperature display  
+[x] current temperature display  
 [ ] max temperature display  
-[ ] energy usage display  
+[x] energy usage display  
 
 [x] temperature up button  
--> [ ] updates current temp display  
+-> [x] updates current temp display  
 [x] temperature down button  
--> [ ] updates current temp display  
+-> [x] updates current temp display  
 [x] thermostat reset button  
--> [ ] updates max temp and current temp displays  
+-> [x] updates max temp and current temp displays  
 [x] power mode on button  
 -> [ ] updates max temp display   
 [x] power mode off button  
 -> [ ] updates max temp  
 [x] energy usage button  
--> [ ] updates energy usage display  
+-> [x] updates energy usage display  
 
+---
+
+### To-Do
+
+[ ] switch from having an energy usage button to a display that auto updates
+[ ] saving state
 
 ---
