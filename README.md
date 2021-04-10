@@ -1,3 +1,8 @@
+
+![thermostat](thermostat.png)
+
+
+
 ### Specification:
 
 [x] Thermostat starts at 20 degrees  
