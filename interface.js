@@ -37,7 +37,7 @@ $( document ).ready(function( ) {
   });
 
   function updateTemp() {
-    $("#changeTemp").text("Current Temp is: " + thermostat.temp);
+    $("#changeTemp").text(thermostat.temp + "°C");
   }
 
   function updatePowerMode() {

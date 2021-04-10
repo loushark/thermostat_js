@@ -9,45 +9,46 @@
     </head>
     <body>
       <header>
-        <h1>- THERMOSTAT - </h1>
+        <h1>* T H E R M O S T A T *</h1>
         <p>it's getting hot in here...</p>
       </header>
       <br>
-      <section>
-        <p id="changeTemp"></p>
-        <p>
+      <div id="thermostatDiv">
+        <div id="one">
+          <p id="changeTemp">°</p>
+          <br>
           <button type="button" id="changeTempUp">Crank it Up!</button>
           <button type="button" id="changeTempDown">Crank it Down!</button>
-        </p>
-        <br>
-        <p id="powerMode"> </p>
-        <p id="PSMLight"></p>
-        <p>
+        </div>
+        <div id="two">
+          <p id="powerMode"> </p>
+          <p id="PSMLight"></p>
+          <br>
           <button type="button" id="powerModeOn">I've got the power!</button>
           <button type="button" id="powerModeOff">I've not got the power!</button>
-        </p>
-        <br>
-        <p id="energy"> </p>
-        <p>
+        </div>
+        <div id="three">
+          <p id="energy"> </p>
+          <br>
           <button type="button" id="energyUsage">Wait, how much energy?!</button>
-        </p>
-        <br>
-        <p>
           <button type="button" id="reset">Reset!</button>
-        </p>
-      </section>
-      <br>
-      <section>
+        </div>
+      </div>
+
+      <section id="weatherAPI">
         <section>
+          <h1> ch ch ch check it out, wha wha what's the weather all about?</h1>
+          <br>
         <form id="select-city">
           <input id="current-city" type="text" placeholder="Enter a city"></input>
-          <input type="submit"></input>
+          <br>
+          <input type="submit" id="submit"></input>
         </form>
+        <br>
         </section>
-        <h3>Current location: 
-          <br><span id="current-location"></span></h3>
-        <h3>Current temperature: <br><span id="current-temperature"></span></h3>
-        <h3>Current weather: <br><span id="current-weather"></span></h3>
+        <h5>Current location:<br><span id="current-location"></span></h5>
+        <h5>Current temperature: <br><span id="current-temperature"></span></h5>
+        <h5>Current weather: <br><span id="current-weather"></span></h5>
       </section>
 
 
